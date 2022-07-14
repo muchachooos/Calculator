@@ -31,6 +31,7 @@ func main() {
 
 	case "/":
 		fmt.Println("Ответ:", x/y)
+
 	default:
 		fmt.Println("Но но но.")
 	}
