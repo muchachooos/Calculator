@@ -6,33 +6,36 @@ import (
 )
 
 func main() {
-	var j string
-	var x float64
-	var y float64
+	var operation string
+	var first int
+	var second int
 
-	fmt.Println("Что делаем?")
-	fmt.Fscan(os.Stdin, &j)
+	fmt.Println("Введите число.")
+	fmt.Fscan(os.Stdin, &first)
 
-	fmt.Println("Введите первое число.")
-	fmt.Fscan(os.Stdin, &x)
+	for {
+		fmt.Println("Введите операцию.")
+		fmt.Fscan(os.Stdin, &operation)
 
-	fmt.Println("Введите второе число.")
-	fmt.Fscan(os.Stdin, &y)
+		if operation == "=" {
+			fmt.Println(first)
+			return
+		}
 
-	switch j {
-	case "-":
-		fmt.Println("Ответ:", x-y)
+		fmt.Println("Введите следующее число.")
+		fmt.Fscan(os.Stdin, &second)
 
-	case "+":
-		fmt.Println("Ответ:", x+y)
-
-	case "*":
-		fmt.Println("Ответ:", x*y)
-
-	case "/":
-		fmt.Println("Ответ:", x/y)
-
-	default:
-		fmt.Println("Но но но.")
+		switch operation {
+		case "-":
+			first -= second
+		case "+":
+			first += second
+		case "*":
+			first *= second
+		case "/":
+			first /= second
+		default:
+			panic("Но но но.")
+		}
 	}
 }
