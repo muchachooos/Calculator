@@ -27,9 +27,15 @@ func main() {
 		1,
 		&element2,
 	}
-	El(&element1)
-}
 
-func El(*element) {
-	fmt.Println()
+	element1.nextElement = &element2
+	element2.nextElement = &element3
+	element3.nextElement = &element4
+
+	var c *element = &element1
+
+	for c != nil {
+		fmt.Println(c.value)
+		c = c.nextElement
+	}
 }
