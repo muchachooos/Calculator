@@ -32,7 +32,7 @@ func main() {
 
 func print(root *Element) {
 	fmt.Println(root.value)
-	fmt.Println(root.nextElement.value)
-	fmt.Println(root.nextElement.nextElement.value)
-	fmt.Println(root.nextElement.nextElement.nextElement.value)
+	if root.nextElement != nil {
+		fmt.Println(root.nextElement)
+	}
 }
