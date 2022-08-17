@@ -33,6 +33,6 @@ func main() {
 func print(root *Element) {
 	fmt.Println(root.value)
 	if root.nextElement != nil {
-		fmt.Println(root.nextElement)
+		print(root.nextElement)
 	}
 }
