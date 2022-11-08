@@ -10,11 +10,11 @@ func main() {
 	var first int
 	var second int
 
-	fmt.Println("Введите число.")
+	fmt.Println("Enter number, please.")
 	fmt.Fscan(os.Stdin, &first)
 
 	for {
-		fmt.Println("Введите операцию.")
+		fmt.Println("Enter operation, please.")
 		fmt.Fscan(os.Stdin, &operation)
 
 		if operation == "=" {
@@ -22,7 +22,7 @@ func main() {
 			return
 		}
 
-		fmt.Println("Введите следующее число.")
+		fmt.Println("Enter next number, please.")
 		fmt.Fscan(os.Stdin, &second)
 
 		switch operation {
@@ -35,7 +35,7 @@ func main() {
 		case "/":
 			first /= second
 		default:
-			panic("Но но но.")
+			panic("No no no.")
 		}
 	}
 }
