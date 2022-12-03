@@ -27,7 +27,7 @@ func main() {
 
 		switch operation {
 		case "-":
-			first -= second
+			first = first - second
 		case "+":
 			first += second
 		case "*":
